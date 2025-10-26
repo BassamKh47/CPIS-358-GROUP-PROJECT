@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>forms 1.2 practice</title>
+</head>
+<body>
+    <h2>log in to physical information</h2>
+    <form>
+        <div>
+            <label>username</label>
+            <input type="text" name="userame" required pattern="[A-Za-z0-9]{4,20}" title="Username must be 4-20 characters, only letters and numbers." />
+        </div>
+
+        <br />
+
+        <div>
+            <label>password</label>
+            <input type="password" maxlength="10" required />
+        </div>
+
+        <br />
+
+        <div>
+            <label>height</label>
+            <input type="number" min="100" max="220" />
+        </div>
+
+
+        <br />
+        <div>
+            <label>birth date</label>
+            <input type="date" />
+        </div>
+        
+        <br />
+
+        <input type="submit" />
+        <input type="reset" />
+    </form>
+</body>
+</html>
