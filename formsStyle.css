@@ -1,0 +1,106 @@
+﻿body {
+    margin: 0;
+    padding: 20px;
+    background-color: ghostwhite;
+}
+    /* Home page style */
+.homeTitle {
+    border-bottom: 2px solid purple;
+    width: 101.8%;
+    padding: 10px;
+    background-color: gainsboro;
+    border-radius: 0 0 0 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    margin: -20px -20px 20px -20px;
+}
+.menu {
+    color: white;
+    border: 1px solid purple;
+    width: 200px;
+    background-color: purple;
+    text-align: center;
+    cursor: pointer;
+    margin: -20px -20px 20px -20px;
+    
+}
+    .menu ul {
+        text-align: center;
+        display: none;
+        list-style: none;
+        padding: 0; 
+        margin: 0;
+    }
+    .menu:hover ul {
+        display: block;
+        background-color: mediumpurple;
+    }
+    .menu ul li {
+        
+        color: white;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        margin-left: 0px;
+        border: 1px solid yellow;
+    }
+        .menu ul li:hover {
+            background-color: rebeccapurple;
+            color: white;
+            
+        }
+        .menu ul li a{
+            color: white;
+            text-decoration: none;
+        }
+
+
+
+
+section {
+    border: 2px solid purple;
+    border-radius: 10px;
+    padding: 10px;
+}
+table, tr, td {
+    border: 1.5px solid purple;    
+}
+table{
+    width: 700px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+
+
+/* Home page style END ⭐⭐⭐⭐⭐ */
+.forms input {
+    border: 1px solid black;
+    padding: 8px;
+    width: 200px;
+    height: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.Login {
+    background-color: deepskyblue;
+    border: 1px solid black;
+    width: 150px;
+    height: 50px;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.SignUp {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    width: 150px;
+    height: 50px;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
