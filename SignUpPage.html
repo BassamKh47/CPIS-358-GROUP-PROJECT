@@ -5,14 +5,33 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="formsStyle.css" />
     <title>Sign up</title>
+    <style>
+        .normal {
+            text-decoration: none;
+        }
+
+        .normal:visited {
+                color: black;
+        }
+
+        section {
+            box-shadow: 2px 2px;
+            width: 60%;
+            margin: auto;
+        }
+        .homeTitle {
+            margin-bottom: 50px;
+        }
+    </style>
     <script>
 
     </script>
 </head>
 <body>
-    <div style="text-align: center; margin-top: 70px;">
-        <form class="forms">
-            <h1 align="center">Create Account</h1>
+    <h1 class="homeTitle"> <a href="HomePage.html" class="normal">NearBy libraries</a></h1>
+    <section>
+        <form class="forms" align="center">
+            <h1>Create Account</h1>
             <label>Your name: <input type="text" id="name" required placeholder="First and last name"></label><br />
             <label>Email: <input type="email" required /></label><br />
             <label>password: <input type="password" required placeholder="At least 6 characters" /></label><br />
@@ -24,7 +43,7 @@
             </p>
 
         </form>
-    </div>
+    </section>
 
 </body>
 </html>

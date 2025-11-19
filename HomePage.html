@@ -3,6 +3,11 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <style>
+        section {
+            width: 80%;
+            margin: auto;
+            border-radius: 20px;
+        }
         li{
             font-size: 16px;
         }
@@ -12,6 +17,34 @@
         .content{
             font-size: 18px;
         }
+        hr{
+            margin: 20px;
+            border: 1px solid purple;
+        }
+        div img {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        .noBorder {
+            border-collapse: collapse;
+
+        }
+        .noBorder th{
+            font: bold;
+        }
+        .noBorder th,
+        .noBorder td {
+            border: none;
+            text-align: center;
+            border: none;
+            padding: 0;
+        }
+        .noBorder tr {
+            border: none;
+            padding: 0;
+        
+        }
+        
     </style>
     <meta charset="utf-8" />
     <title>Home Page</title>
@@ -25,7 +58,7 @@
             <li><a href="HomePage.html">🏠 Home page </a></li>
             <li><a href="Loginpage.html">Login here</a></li>
             <li><a href="SignUpPage.html">Sign Up here</a></li>
-            <li><a href="">About us</a></li>
+            <li><a href="AboutUs.html">About us</a></li>
         </ul>
     </nav>
     <p class="intro">
@@ -34,7 +67,7 @@
     <section>
         <h2 align="center">Books for rent with different categories</h2>
         <p class="content"><strong>Best seller books &#11088 &#11088 &#11088 &#11088 &#11088 </strong></p>
-        <table border="1" align="center">
+        <table border="1" align="center" class="border">
             <tr>
                 <th>information
                 <th colspan="3">
@@ -54,8 +87,44 @@
                 <td><a href="real.jpg" onclick="bookDetails()"><img align="left" width="20" lenth="25" src="real.jpg" /> </a>Steve Jobs</td>
             </tr>
         </table>
-                
+        <hr />
         <p class="content"><strong>Current Self-development books for rent</strong></p>
-    </section>
+        <ul>
+            <li>The power of your subconscious mind</li>
+            <li>Think and grow rich</li>
+            <li>Awaken the giant within</li>
+            <li>The magic of thinking big</li>
+            <li>How to win friends and influence people</li>
+        </ul>
+
+        <div>
+            <table align="center" class="noBorder">
+                <tr>
+                    <th>Atomic habits</th>
+                    <th>mindset</th>
+                    <th>the one thing</th>
+                    <th>grit</th>
+                                        
+                </tr>
+
+                <tr>
+                    <td><img src="Atmoic.jpg" width="100" length="150" /></td>
+                    <td><img src="mindset.jpg" width="100" length="150" /></td>
+                    <td><img src="theOne.jpg" width="100" length="150" /></td>
+                    <td><img src="grit.jpg" width="100" length="150" /></td>
+                    
+                    
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>55</td>
+                    <td>55</td>
+                    <td>55</td>
+                                        
+                </tr>
+            </table>
+        </div>
+
+     </section>
 </body>
 </html>
