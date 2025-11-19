@@ -105,3 +105,16 @@ table{
     font-size: 20px;
 }
 
+/* Book_Page style ⭐⭐⭐⭐⭐ */
+
+.bay_button {
+    background-color: orange;
+    border: 1px solid black;
+    width: 100px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+

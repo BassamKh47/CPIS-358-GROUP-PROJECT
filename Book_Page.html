@@ -4,8 +4,8 @@
         <style>
             
             .photo_box {
-                border : 2px solid black;
-                padding: 80px;
+                border: 2px solid purple;               
+                 padding: 80px;
                 top: 100px;
                position: absolute;
                right: 60px;
@@ -14,19 +14,38 @@
                 overflow: hidden;
             }
 
+        
+
             .info{
-                border: 2px solid black;
-                top : 90px;
-                width: 320px;
+                border: 2px solid purple;
+                top : 140px;
+                width: 600px;
                 right: 330px;
                 position: absolute;
                 font-size: 18px;
                 margin-top: 20px;
-                text-align: right;
+                text-align: left;
                 height: 300px;
             }
 
-            
+            .bay{
+                position: absolute;
+                border: 2px solid purple;
+                top: 500px;
+                right: 60px;
+                font-size: 24px;
+                width: 870px;
+                
+            }
+
+            .more_info{
+                position: absolute;
+                border: 2px solid purple;
+                top: 700px;
+                right: 60px;
+                font-size: 24px;
+                width: 870px;
+            }
 
            
         </style>
@@ -44,7 +63,7 @@
         </ul>
     </nav>
         <div class="photo_box">
-            <img src="photo.jpg" alt="Book Image" style="width: 100px; height: auto;">
+            <img src="photo.jpg" alt="Book Image" style="width: 260; height: 360px; position:absolute; top: 0px; left: 0px;"/>
         </div>
 
         <div class="info">
@@ -53,6 +72,28 @@
             <p><strong>Published:</strong> 1925</p>
             <p><strong>Description:</strong> A novel set in the Jazz Age that tells the story of Jay Gatsby's unrequited love for Daisy Buchanan.</p>
     <h2 align="center"><small>Book Title: The Great Gatsby</small></h2>
+        </div>
+
+        <div class="bay">
+            <table border="1" align="center" height="100px" width=" 1200px">
+                <tr>
+                    <td width=" 600px">E-book</td>
+                    <td width=" 600px">Physical book</td>
+                    
+                </tr>
+                <tr>
+                    <td><button onclick="" type="submit" value="bay-E" class="bay_button">Order Naw</button></td>
+                    <td><button onclick="" type="submit" value="bay-P">Order Naw</button></td>
+
+                
+            </table>
+            
+        </div>
+
+        <div class="more_info">
+            <p><strong>More Information:</strong></p>
+            <p>For more details about the book, please visit our website or contact your local library.</p>
+        </div>
         
     </body>
 </html>
