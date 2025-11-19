@@ -3,6 +3,25 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <style>
+        .about {
+            background-color: rebeccapurple;
+            cursor: pointer;
+            border: 2px solid yellow;
+            width: 100px;
+            height: 100px;
+            align-content: center;
+            border-radius: 10px;
+            float: right;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+        .about a {
+            text-align: center;
+            text-decoration: none;
+            color: white;
+
+        }
         section {
             width: 80%;
             margin: auto;
@@ -28,18 +47,21 @@
         .noBorder {
             border-collapse: collapse;
             border: none;
+            width: 80%;
 
         }
         .noBorder th{
             font: bold;
         }
-        .noBorder th,
-        .noBorder td {
-            border: none;
-            text-align: center;
-            border: none;
-            padding: 0;
-        }
+            .noBorder th,
+            .noBorder td {
+                border: none;
+                text-align: center;
+                border: none;
+                padding: 0;
+                width: 150px; 
+                word-wrap: break-word; 
+            }
         .noBorder tr {
             border: none;
             padding: 0;
@@ -50,6 +72,21 @@
     <meta charset="utf-8" />
     <title>Home Page</title>
     <link rel="stylesheet" href="formsStyle.css" />
+    <script>
+        function setDark() {
+            var changeButton = document.getElementById("mode");
+            if (document.body.style.backgroundColor === "black") { 
+                document.body.style.color = "black";
+                document.body.style.backgroundColor = "ghostwhite";
+                changeButton.textContent = "Dark Mode";
+        }
+            else  {
+                document.body.style.color = "white";
+                document.body.style.backgroundColor = "black";
+                changeButton.textContent = "Light Mode";
+         }
+        }
+    </script>
 </head>
 <body>
     <h1 class="homeTitle">NearBy libraries</h1>
@@ -60,8 +97,14 @@
             <li><a href="Loginpage.html">Login here</a></li>
             <li><a href="SignUpPage.html">Sign Up here</a></li>
             <li><a href="AboutUs.html">About us</a></li>
+            <li onclick="setDark()" id="mode">Dark Mode</li>
         </ul>
     </nav>
+
+
+    <div align="right" class="about"><a href="AboutUs.html">About Us</a></div>
+    
+
     <p class="intro">
     This website allows users to supply thier used books for rent or for sale, so other users can barrow or rent the books</p>
     
@@ -102,10 +145,10 @@
             <table align="center" class="noBorder">
                 <tr>
                     <th>Atomic habits</th>
-                    <th>mindset</th>
-                    <th>the one thing</th>
-                    <th>grit</th>
-                                        
+                    <th>Mindset</th>
+                    <th>The One Thing</th>
+                    <th>Grit</th>
+
                 </tr>
 
                 <tr>
@@ -113,19 +156,25 @@
                     <td><img src="mindset.jpg" width="100" height="150" /></td>
                     <td><img src="theOne.jpg" width="100" height="150" /></td>
                     <td><img src="grit.jpg" width="100" height="150" /></td>
-                    
+
                 </tr>
 
                 <tr>
-                    <td>44</td>
-                    <td>55</td>
-                    <td>55</td>
-                    <td>55</td>
-                                        
+                    <td>Focuses on how tiny daily habits, when compounded, can lead to remarkable personal and professional improvements.
+                    Offers practical strategies for building good habits and breaking bad ones.</td>
+                    <td>Explains the difference between a fixed mindset and a growth mindset,
+                    showing how adopting a growth mindset can improve learning, resilience, and achievement.</td>
+                    <td>Advocates focusing on the single most important task that will make everything else easier or unnecessary,
+                    helping increase productivity and prioritize effectively.</td>
+                    <td>Explores how passion and perseverance (grit) are key predictors of success, 
+                    often more than talent or intelligence, and how to cultivate it over time.</td>
+
                 </tr>
             </table>
         </div>
-
-     </section>
+        <hr />
+        <label>Rate our site:</label>
+             
+    </section>
 </body>
 </html>
