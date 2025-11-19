@@ -108,9 +108,9 @@ table{
 /* Book_Page style ⭐⭐⭐⭐⭐ */
 
 .bay_button {
-    background-color: orange;
+    background-color: gainsboro;
     border: 1px solid black;
-    width: 100px;
+    width: 150px;
     height: 40px;
     padding: 8px;
     border-radius: 10px;
