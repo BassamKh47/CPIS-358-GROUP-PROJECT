@@ -2,52 +2,102 @@
     <head>
         <link rel="stylesheet" href="formsStyle.css" />
         <style>
-            
+            /* Make section the positioning context and give it some internal padding */
+            section {
+                /*
+                Assuming 'formsStyle.css' has general section styles (like border/width/margin).
+                If not, you may need to add:
+                width: 80%;
+                margin: auto;
+                border: 2px solid purple;
+                */
+                position: relative; /* KEY CHANGE: establishes positioning context */
+                padding: 20px; /* Add internal padding */
+                overflow: hidden; /* To contain floated elements */
+            }
+
             .photo_box {
-                border: 2px solid purple;               
-                 padding: 80px;
-                top: 100px;
-               position: absolute;
-               right: 60px;
-                width: 100px;
-                height: 200px;
-                overflow: hidden;
+                border: 2px solid purple;
+                padding: 0; 
+                float: right; 
+                width: 260px; 
+                height: 360px; 
+                margin-left: 20px; 
+                margin-bottom: 20px;
+            }
+            /* Reset absolute position on image since its parent is now floated */
+            .photo_box img {
+                width: 100%;
+                height: 100%;
+                position: static;
+                top: auto;
+                left: auto;
             }
 
-        
-
-            .info{
+            .info {
                 border: 2px solid purple;
-                top : 140px;
-                width: 600px;
-                right: 330px;
-                position: absolute;
+                /* Remove absolute positioning to flow normally */
+                position: static;
+                width: auto; 
+                min-height: 360px; 
+                margin-top: 0; 
+                right: auto;
                 font-size: 18px;
-                margin-top: 20px;
                 text-align: left;
-                height: 300px;
+                padding: 10px;
+                overflow: auto;
             }
 
-            .bay{
-                position: absolute;
-                border: 2px solid purple;
-                top: 500px;
-                right: 60px;
-                font-size: 24px;
-                width: 870px;
+            .info h2 {
+                margin-top: 0;
+            }
+            .info p {
+                margin-bottom: 10px;
+            }
+
+            .bay {
+                /* ... (existing styles) ... */
+                position: static;
+                clear: both;
                 
-            }
-
-            .more_info{
-                position: absolute;
                 border: 2px solid purple;
-                top: 700px;
-                right: 60px;
-                font-size: 24px;
-                width: 870px;
+                
+                width: 100%;
+                margin-top: 20px;
+                /* Padding reduced slightly or removed to allow content to spread, 
+                   but keeping it for visual comfort around the table */
+                padding: 10px; 
+                text-align: center;
             }
 
-           
+            .bay table {
+                width: 100%; /* Ensures table is full width */
+                border-collapse: collapse; /* KEY: Collapses borders for a cleaner look */
+                border: none; /* Remove table border */
+                height: 100px; /* Optional: Gives the table a minimum height */
+            }
+
+            .bay table tr,
+            .bay table td {
+                border: none; /* KEY: Override the general purple border on cells and rows */
+                padding: 5px; /* Add slight padding */
+                text-align: center;
+            }
+
+            .bay table td:first-child {
+                /* Add a separator between the two columns if desired */
+                border-right: 1px solid #ccc; 
+            }
+            
+            .more_info {
+                /* Remove absolute positioning and let it flow after the bay div */
+                position: static;
+                border: 2px solid purple;
+                width: 100%;
+                margin-top: 20px;
+                padding: 10px;
+            }
+
         </style>
     </head>
 
@@ -62,40 +112,34 @@
             <li><a href="">About us</a></li>
         </ul>
     </nav>
+
+    <section>
         <div class="photo_box">
-            <img src="photo.jpg" alt="Book Image" style="width: 260; height: 360px; position:absolute; top: 0px; left: 0px;"/>
+            <img src="photo.jpg" alt="Book Image" style="width: 100%; height: 100%;"/>
         </div>
 
         <div class="info">
+            <h2 align="center"><small>Book Title: The Great Gatsby</small></h2>
             <p><strong>Author:</strong> F. Scott Fitzgerald</p>
             <p><strong>Genre:</strong> Novel</p>
             <p><strong>Published:</strong> 1925</p>
             <p><strong>Description:</strong> A novel set in the Jazz Age that tells the story of Jay Gatsby's unrequited love for Daisy Buchanan.</p>
-    <h2 align="center"><small>Book Title: The Great Gatsby</small></h2>
         </div>
 
         <div class="bay">
-            <table border="1" align="center" height="100px" width=" 1200px">
+            <table border="1" align="center">
                 <tr>
-                    <td width=" 600px">E-book</td>
-                    <td width=" 600px">Physical book</td>
-                    
+                    <td>E-book <br><br>Price:<br><br><button onclick="" type="submit" value="bay-E" class="bay_button">Order Now</button></td>
+                    <td>Physical book<br><br>Price:<br><br><button onclick="" type="submit" value="bay-P" class="bay_button">Order Now</button></td>
                 </tr>
-                <tr>
-                    <td><button onclick="" type="submit" value="bay-E" class="bay_button">Order Naw</button></td>
-                    <td><button onclick="" type="submit" value="bay-P" class="bay_button">Order Naw</button></td>
-
-                
-            </table>
             
+            </table>
         </div>
 
         <div class="more_info">
             <p><strong>More Information:</strong></p>
             <p>book</p>
         </div>
-
-    
-        
+    </section>
     </body>
 </html>
