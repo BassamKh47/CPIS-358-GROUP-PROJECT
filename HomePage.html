@@ -121,6 +121,26 @@
                 var info = document.getElementById("info");
                 info.innerHTML = ("<br/><strong>Explains how passion and perseverance (grit) matter more than talent in achieving long-term success, and how anyone can build grit through consistent effort. <br/><br> Rent it now: $5 / month </strong>"
                     + '<button class="rent">Rent</button>');
+            
+            }else if (input === document.getElementById("The_Secret")) {
+                var info = document.getElementById("info2");
+                info.innerHTML = ("<br/><strong>The Secret Library is a fascinating tour of literature through the medium of its most emblematic invention - the book.<br/><br> Rent it now: $5 / month </strong>"
+                    + '<button class="rent">Rent</button>');
+
+            } else if (input === document.getElementById("The_Thief")) {
+                var info = document.getElementById("info2");
+                info.innerHTML = ("<br/><strong>a beautifully balanced piece of storytelling...Unsettling, thought-provoking, life affirming, triumphant and tragic, this is a novel of breathtaking scope, masterfully told. It is an important piece of work, but also a wonderful page-turner. ― Guardian <br/><br> Rent it now: $5 / month </strong>"
+                    + '<button class="rent">Rent</button>');
+
+            } else if (input === document.getElementById("The_Intelligent")) {
+                var info = document.getElementById("info2");
+                info.innerHTML = ("<br/><strong>The greatest investment advisor of the twentieth century, Benjamin Graham taught and inspired people worldwide. <br/><br> Rent it now: $5 / month </strong>"
+                    + '<button class="rent">Rent</button>');
+
+            } else if (input === document.getElementById("Byline")) {
+                var info = document.getElementById("info2");
+                info.innerHTML = ("<br/><strong>Byline for the Dead is a historical mystery-thriller that interweaves stories from different eras as two journalists, five decades apart, work to unravel the truths about one of the most violent labor strikes in American history. <br/><br> Rent it now: $5 / month </strong>"
+                    + '<button class="rent">Rent</button>');
             }
         }
         
@@ -197,6 +217,31 @@
                 </tr>
                 <tr>
                     <td colspan="4" id="info"></td>
+                </tr>
+
+            </table>
+        </div>
+        <hr />
+
+        <p class="content"><strong>Current Novel books for rent:</strong></p>
+        <div>
+            <table align="center" class="noBorder">
+                <tr>
+                    <th>The Secret Library</th>
+                    <th>The book thief</th>
+                    <th>The Intelligent Investor</th>
+                    <th>Byline for the Dead</th>
+
+                </tr>
+
+                <tr>
+                    <td><img src="The Secret Library.jpg" width="100" height="150" onclick="showInfo(this)" id="The_Secret" /></td>
+                    <td><img src="The book thief.jpg" width="100" height="150" onclick="showInfo(this)" id="The_Thief" /></td>
+                    <td><img src="The Intelligent Investor.jpg" width="100" height="150" onclick="showInfo(this)" id="The_Intelligent" /></td>
+                    <td><img src="Byline for the Dead.jpg" width="100" height="150" onclick="showInfo(this)" id="Byline"></td>
+                </tr>
+                <tr>
+                    <td colspan="4" id="info2"></td>
                 </tr>
 
 
