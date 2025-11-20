@@ -123,6 +123,16 @@
             }
 
         </style>
+
+        <script>
+            var bookData = {
+                title: "The Great Gatsby",
+                Author: "F. Scott Fitzgerald",
+                Genre: "Novel",
+                Published: "1925",
+                Description: "A novel set in the Jazz Age that tells the story of Jay Gatsby's unrequited love for Daisy Buchanan.",
+            }
+        </script>
     </head>
 
     <body>
@@ -139,22 +149,22 @@
 
     <section>
         <div class="photo_box">
-            <img src="photo.jpg" alt="Book Image" style="width: 100%; height: 100%;"/>
+            <img src="photo.jpg" id="book_photo" alt="Book Image" style="width: 100%; height: 100%;"/>
         </div>
 
         <div class="info">
-            <h2 align="center"><small>Book Title: The Great Gatsby</small></h2>
-            <p><strong>Author:</strong> F. Scott Fitzgerald</p>
-            <p><strong>Genre:</strong> Novel</p>
-            <p><strong>Published:</strong> 1925</p>
-            <p><strong>Description:</strong> A novel set in the Jazz Age that tells the story of Jay Gatsby's unrequited love for Daisy Buchanan.</p>
+            <h2 align="center id=title"><small>Book Title: The Great Gatsby</small></h2>
+            <p id="Author"><strong >Author:</strong> F. Scott Fitzgerald</p>
+            <p id="Genre"><strong>Genre:</strong> Novel</p>
+            <p id="Published"><strong>Published:</strong> 1925</p>
+            <p id="Discription"><strong>Description:</strong> A novel set in the Jazz Age that tells the story of Jay Gatsby's unrequited love for Daisy Buchanan.</p>
         </div>
 
         <div class="bay">
             <table border="1" align="center">
                 <tr>
-                    <td>E-book <br><br>Price:<br><br><button onclick="" type="submit" value="bay-E" class="bay_button">Order Now</button></td>
-                    <td>Physical book<br><br>Price:<br><br><button onclick="" type="submit" value="bay-P" class="bay_button">Order Now</button></td>
+                    <td id="E-price">E-book <br><br>Price:<br><br><button onclick="" type="submit" value="bay-E" class="bay_button">Order Now</button></td>
+                    <td id="P-price" >Physical book<br><br>Price:<br><br><button onclick="" type="submit" value="bay-P" class="bay_button">Order Now</button></td>
                 </tr>
             
             </table>
@@ -164,22 +174,22 @@
             <p><strong>More Information:</strong></p>
             <table border="1" align="center" style="text-align: left;">
                 <tr>
-                    <th>Language: Englesh</th>
+                    <th id="Language">Language: Englesh</th>
                 </tr>
                 <tr>
-                    <th>Publisher: </th>
+                    <th id="Publisher">Publisher: </th>
                 </tr>
                 <tr>
-                    <th>Publication date: </th>
+                    <th id="Publication">Publication date: </th>
                 </tr>
                 <tr>
-                    <th>Print length: </th>
+                    <th id="N-page">Print length: </th>
                 </tr>
                 <tr>
-                    <th>weight: </th>
+                    <th id="weight">weight: </th>
                 </tr>
                 <tr>
-                    <th>Dimensions: </th>
+                    <th id="Dimensions">Dimensions: </th>
                 </tr>
 
             </table>
