@@ -98,6 +98,30 @@
                 padding: 10px;
             }
 
+            .more_info table {
+                width: 100%; /* 🔥 This makes the table stretch fully across the box */
+                border-collapse: collapse; /* Optional, but cleans up borders */
+                border: none; /* Removes the border around the outside of the table */
+            }
+
+            /* Overrides default border on cells and headers */
+            .more_info table tr,
+            .more_info table th,
+            .more_info table td {
+                border: 1px solid #ccc; /* Use a light separator border */
+                padding: 8px;
+                text-align: left; /* Aligns content to the left inside cells */
+            }
+
+            /* Optional: Remove bottom border on the header paragraph */
+            .more_info p {
+                margin-bottom: 0;
+            }
+            .more_info p:first-child {
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 8px; /* Add some space below the title */
+            }
+
         </style>
     </head>
 
@@ -138,7 +162,27 @@
 
         <div class="more_info">
             <p><strong>More Information:</strong></p>
-            <p>book</p>
+            <table border="1" align="center" style="text-align: left;">
+                <tr>
+                    <th>Language: Englesh</th>
+                </tr>
+                <tr>
+                    <th>Publisher: </th>
+                </tr>
+                <tr>
+                    <th>Publication date: </th>
+                </tr>
+                <tr>
+                    <th>Print length: </th>
+                </tr>
+                <tr>
+                    <th>weight: </th>
+                </tr>
+                <tr>
+                    <th>Dimensions: </th>
+                </tr>
+
+            </table>
         </div>
     </section>
     </body>
