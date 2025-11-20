@@ -77,6 +77,9 @@
             cursor: pointer;
             border-radius: 8px;
         }
+        .rate {
+            margin: 5px 5px;
+        }
         
     </style>
     <meta charset="utf-8" />
@@ -120,6 +123,7 @@
                     + '<button class="rent">Rent</button>');
             }
         }
+        
     </script>
 </head>
 <body>
@@ -195,11 +199,13 @@
                     <td colspan="4" id="info"></td>
                 </tr>
 
-             </table>
+            </table>
         </div>
         <hr />
-        <label>Rate our site:</label>
-             
+        <label>Rate our site:</label><br />
+        <label class="rate"><input type="radio" onclick="ask()" name="1" /> Great </label>
+        <label><input type="radio" onclick="ask()" name="1"/> Normal </label>
+        <label><input type="radio" onclick="ask()" name="1" /> Bad</label>
     </section>
 </body>
 </html>
