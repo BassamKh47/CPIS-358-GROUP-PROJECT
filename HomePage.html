@@ -140,8 +140,12 @@
             } else if (input === document.getElementById("Byline")) {
                 var info = document.getElementById("info2");
                 info.innerHTML = ("<br/><strong>Byline for the Dead is a historical mystery-thriller that interweaves stories from different eras as two journalists, five decades apart, work to unravel the truths about one of the most violent labor strikes in American history. <br/><br> Rent it now: $5 / month </strong>"
-                    + '<button class="rent">Rent</button>');
+                    + '<button class="rent" onclick="bookDetails()">Rent</button>');
             }
+        }
+
+        function bookDetails() {
+            window.location.href = "Book_Page.html";
         }
         
     </script>
