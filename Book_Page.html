@@ -98,7 +98,41 @@
                 padding: 10px;
             }
 
+            .more_info table {
+                width: 100%; /* 🔥 This makes the table stretch fully across the box */
+                border-collapse: collapse; /* Optional, but cleans up borders */
+                border: none; /* Removes the border around the outside of the table */
+            }
+
+            /* Overrides default border on cells and headers */
+            .more_info table tr,
+            .more_info table th,
+            .more_info table td {
+                border: 1px solid #ccc; /* Use a light separator border */
+                padding: 8px;
+                text-align: left; /* Aligns content to the left inside cells */
+            }
+
+            /* Optional: Remove bottom border on the header paragraph */
+            .more_info p {
+                margin-bottom: 0;
+            }
+            .more_info p:first-child {
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 8px; /* Add some space below the title */
+            }
+
         </style>
+
+        <script>
+            var bookData = {
+                title: "The Great Gatsby",
+                Author: "F. Scott Fitzgerald",
+                Genre: "Novel",
+                Published: "1925",
+                Description: "A novel set in the Jazz Age that tells the story of Jay Gatsby's unrequited love for Daisy Buchanan.",
+            }
+        </script>
     </head>
 
     <body>
@@ -109,28 +143,29 @@
             <li><a href="HomePage.html">🏠 Home page </a></li>
             <li><a href="Loginpage.html">Login here</a></li>
             <li><a href="SignUpPage.html">Sign Up here</a></li>
-            <li><a href="">About us</a></li>
+            <li><a href="AboutUs.html">About us</a></li>
+            <li onclick="setDark()" id="mode">Dark Mode</li>
         </ul>
     </nav>
 
     <section>
         <div class="photo_box">
-            <img src="photo.jpg" alt="Book Image" style="width: 100%; height: 100%;"/>
+            <img src="photo.jpg" id="book_photo" alt="Book Image" style="width: 100%; height: 100%;"/>
         </div>
 
         <div class="info">
-            <h2 align="center"><small>Book Title: The Great Gatsby</small></h2>
-            <p><strong>Author:</strong> F. Scott Fitzgerald</p>
-            <p><strong>Genre:</strong> Novel</p>
-            <p><strong>Published:</strong> 1925</p>
-            <p><strong>Description:</strong> A novel set in the Jazz Age that tells the story of Jay Gatsby's unrequited love for Daisy Buchanan.</p>
+            <h2 align="center id=title"><small>Book Title: The Great Gatsby</small></h2>
+            <p id="Author"><strong >Author:</strong> F. Scott Fitzgerald</p>
+            <p id="Genre"><strong>Genre:</strong> Novel</p>
+            <p id="Published"><strong>Published:</strong> 1925</p>
+            <p id="Discription"><strong>Description:</strong> A novel set in the Jazz Age that tells the story of Jay Gatsby's unrequited love for Daisy Buchanan.</p>
         </div>
 
         <div class="bay">
             <table border="1" align="center">
                 <tr>
-                    <td>E-book <br><br>Price:<br><br><button onclick="" type="submit" value="bay-E" class="bay_button">Order Now</button></td>
-                    <td>Physical book<br><br>Price:<br><br><button onclick="" type="submit" value="bay-P" class="bay_button">Order Now</button></td>
+                    <td id="E-price">E-book <br><br>Price:<br><br><button onclick="" type="submit" value="bay-E" class="bay_button">Order Now</button></td>
+                    <td id="P-price" >Physical book<br><br>Price:<br><br><button onclick="" type="submit" value="bay-P" class="bay_button">Order Now</button></td>
                 </tr>
             
             </table>
@@ -138,7 +173,27 @@
 
         <div class="more_info">
             <p><strong>More Information:</strong></p>
-            <p>book</p>
+            <table border="1" align="center" style="text-align: left;">
+                <tr>
+                    <th id="Language">Language: Englesh</th>
+                </tr>
+                <tr>
+                    <th id="Publisher">Publisher: </th>
+                </tr>
+                <tr>
+                    <th id="Publication">Publication date: </th>
+                </tr>
+                <tr>
+                    <th id="N-page">Print length: </th>
+                </tr>
+                <tr>
+                    <th id="weight">weight: </th>
+                </tr>
+                <tr>
+                    <th id="Dimensions">Dimensions: </th>
+                </tr>
+
+            </table>
         </div>
     </section>
     </body>
