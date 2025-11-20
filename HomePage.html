@@ -3,6 +3,25 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <style>
+        .about {
+            background-color: rebeccapurple;
+            cursor: pointer;
+            border: 2px solid yellow;
+            width: 100px;
+            height: 100px;
+            align-content: center;
+            border-radius: 10px;
+            float: right;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+        .about a {
+            text-align: center;
+            text-decoration: none;
+            color: white;
+
+        }
         section {
             width: 80%;
             margin: auto;
@@ -28,28 +47,80 @@
         .noBorder {
             border-collapse: collapse;
             border: none;
+            width: 80%;
 
         }
         .noBorder th{
             font: bold;
         }
-        .noBorder th,
-        .noBorder td {
-            border: none;
-            text-align: center;
-            border: none;
-            padding: 0;
-        }
+            .noBorder th,
+            .noBorder td {
+                border: none;
+                text-align: center;
+                border: none;
+                padding: 0;
+                width: 150px; 
+                word-wrap: break-word; 
+            }
         .noBorder tr {
             border: none;
             padding: 0;
         
+        }
+        img:hover {
+            cursor: pointer;
+            border: 2px solid purple;
+            
+        }
+        .rent{
+            background-color: mediumpurple;
+            cursor: pointer;
+            border-radius: 8px;
         }
         
     </style>
     <meta charset="utf-8" />
     <title>Home Page</title>
     <link rel="stylesheet" href="formsStyle.css" />
+    <script>
+        function setDark() {
+            var changeButton = document.getElementById("mode");
+            if (document.body.style.backgroundColor === "black") { 
+                //this is light mode
+                document.body.style.color = "black";
+                document.body.style.backgroundColor = "ghostwhite";
+                changeButton.textContent = "Dark Mode";
+        }
+            else {
+                // this is Dark Mode
+                document.body.style.color = "white";
+                document.body.style.backgroundColor = "black";
+                changeButton.textContent = "Light Mode";
+         }
+        }
+        function showInfo(input) {
+            if (input === document.getElementById("Atomic")) {
+                var info = document.getElementById("info");
+                info.innerHTML = ("<br/><strong>This book teaches how small daily habits, when practiced consistently, can lead to remarkable personal and professional improvements. <br/><br> Rent it now: $5 / month </strong>"
+                    + '<button class="rent">Rent</button>');
+
+            } else if (input === document.getElementById("Mindset")) {
+                var info = document.getElementById("info");
+                info.innerHTML = ("<br/><strong>This book Explores the difference between a fixed mindset and a growth mindset, showing how believing in your ability to grow can improve learning, resilience, and success. <br/><br> Rent it now: $5 / month </strong>"
+                    + '<button class="rent">Rent</button>');
+
+            } else if (input === document.getElementById("TheOne")) {
+                var info = document.getElementById("info");
+                info.innerHTML = ("<br/><strong>Teaches you to focus on the single most important task that will make everything else easier or unnecessary, helping you increase productivity and reduce distractions. <br/><br> Rent it now: $5 / month </strong>"
+                    + '<button class="rent">Rent</button>');
+
+            } else if (input === document.getElementById("Grit")) {
+                var info = document.getElementById("info");
+                info.innerHTML = ("<br/><strong>Explains how passion and perseverance (grit) matter more than talent in achieving long-term success, and how anyone can build grit through consistent effort. <br/><br> Rent it now: $5 / month </strong>"
+                    + '<button class="rent">Rent</button>');
+            }
+        }
+    </script>
 </head>
 <body>
     <h1 class="homeTitle">NearBy libraries</h1>
@@ -60,10 +131,16 @@
             <li><a href="Loginpage.html">Login here</a></li>
             <li><a href="SignUpPage.html">Sign Up here</a></li>
             <li><a href="AboutUs.html">About us</a></li>
+            <li onclick="setDark()" id="mode">Dark Mode</li>
         </ul>
     </nav>
+
+
+    <div align="right" class="about"><a href="AboutUs.html">About Us</a></div>
+    
+
     <p class="intro">
-    This website allows users to supply thier used books for rent or for sale, so other users can barrow or rent the books</p>
+    This website allows users to supply their used books for rent or for sale, so other users can borrow or rent the books</p>
     
     <section>
         <h2 align="center">Books for rent with different categories</h2>
@@ -102,30 +179,27 @@
             <table align="center" class="noBorder">
                 <tr>
                     <th>Atomic habits</th>
-                    <th>mindset</th>
-                    <th>the one thing</th>
-                    <th>grit</th>
-                                        
+                    <th>Mindset</th>
+                    <th>The One Thing</th>
+                    <th>Grit</th>
+
                 </tr>
 
                 <tr>
-                    <td><img src="Atmoic.jpg" width="100" height="150" /></td>
-                    <td><img src="mindset.jpg" width="100" height="150" /></td>
-                    <td><img src="theOne.jpg" width="100" height="150" /></td>
-                    <td><img src="grit.jpg" width="100" height="150" /></td>
-                    
+                    <td><img src="Atmoic.jpg" width="100" height="150" onclick="showInfo(this)" id="Atomic" /></td>
+                    <td><img src="mindset.jpg" width="100" height="150" onclick="showInfo(this)" id="Mindset" /></td>
+                    <td><img src="theOne.jpg" width="100" height="150" onclick="showInfo(this)" id="TheOne" /></td>
+                    <td><img src="grit.jpg" width="100" height="150" onclick="showInfo(this)" id="Grit"></td>
+                </tr>
+                <tr>
+                    <td colspan="4" id="info"></td>
                 </tr>
 
-                <tr>
-                    <td>44</td>
-                    <td>55</td>
-                    <td>55</td>
-                    <td>55</td>
-                                        
-                </tr>
-            </table>
+             </table>
         </div>
-
-     </section>
+        <hr />
+        <label>Rate our site:</label>
+             
+    </section>
 </body>
 </html>
